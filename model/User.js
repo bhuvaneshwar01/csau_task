@@ -17,25 +17,23 @@ const userSchema = new Schema({
     },
     "tag" : {
         type: String,
-        required: [true,'req/brown only accepted'],
+        required: [true,'choose tag!'],
         enum: {
             values: ['red','brown'],
-            message: '{VALUE} is not supported'
+            message: 'req/brown only accepted'
         }
     },
     "domain" : {
         type: String,
-        required: [true,'tech/marketing/design only accepted'],
+        required: [true,'Choose domain'],
         enum: {
             values: ['tech','marketing','design'],
-            message: '{VALUE} is not supported'
+            message: 'tech/marketing/design only accepted'
         }
     },
     "mob_no" : {
         type: Number,
-        required: true,
-        minlength: 10,
-        maxlength: 10
+        required: true
     },
     "email": {
         type: String,
